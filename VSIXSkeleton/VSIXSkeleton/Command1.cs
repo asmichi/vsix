@@ -93,15 +93,25 @@ namespace VSIXSkeleton
         /// <param name="e">Event args.</param>
         private void MenuItemCallback(object sender, EventArgs e)
         {
-            var dialog = new Views.Command1Window()
-            {
-                Owner = System.Windows.Application.Current.MainWindow,
-                ShowInTaskbar = false,
-                ResizeMode = System.Windows.ResizeMode.NoResize
-            };
+            // Code for dialog
+            //var dialog = new Views.Command1Window()
+            //{
+            //    Owner = System.Windows.Application.Current.MainWindow,
+            //    ShowInTaskbar = false,
+            //    ResizeMode = System.Windows.ResizeMode.NoResize
+            //};
             // var vm = new ViewModels.Command1WindowViewModel();
             // dialog.DataContext = vm;
-            dialog.ShowDialog();
+            // dialog.ShowDialog();
+
+            // Obtain the SVsSolution service object.
+            var solutionService = this.ServiceProvider.GetService(typeof(SVsSolution)) as IVsSolution;
+
+            // Close the entire solution. (pHier == null, docCookie == 0)
+            solutionService.CloseSolutionElement(
+                (uint)__VSSLNSAVEOPTIONS.SLNSAVEOPT_NoSave,
+                null,
+                0);
         }
     }
 }

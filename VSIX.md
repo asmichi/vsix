@@ -17,7 +17,11 @@
     * VCConfiguration interface
     * VCConfiguration.PropertySheets
     * VCConfiguration
-    
+
+# Integration Testing
+* How to: Run Tests in the Visual Studio Process: https://msdn.microsoft.com/ja-jp/library/bb491714(v=vs.90).aspx
+* DeploymentItemAttribute class: https://msdn.microsoft.com/ja-jp/library/microsoft.visualstudio.testtools.unittesting.deploymentitemattribute.aspx
+
 # Language Service
 
 * Language Service
