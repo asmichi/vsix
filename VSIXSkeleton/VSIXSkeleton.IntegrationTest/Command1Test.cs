@@ -6,7 +6,6 @@ using Microsoft.VisualStudio.Shell.Interop;
 
 namespace VSIXSkeleton.IntegrationTest
 {
-
     [TestClass]
     // Enable "Copy to output directory" property for the EmptySolution.sln item beforehand.
     [DeploymentItem(@"Data\EmptySolution.sln", "Data")]
@@ -36,6 +35,11 @@ namespace VSIXSkeleton.IntegrationTest
 
         [TestMethod]
         [HostType("VS IDE")]
+        // This VSIX must be installed in the VS instance.
+        //
+        // Could not make this work in 15.0...
+        // - MSTest 14.0 cannot find 15.0 maybe because now multiple instances of 15.0 can be installed and thus instance locations are stored differently.
+        // - MSTest 15.0 cannot find VsHive.
         [TestProperty("VsHiveName", "14.0Exp")]
         public void InvokeCommand1Test()
         {

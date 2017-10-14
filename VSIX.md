@@ -2,6 +2,7 @@
 * Visual Studio SDK: https://msdn.microsoft.com/en-us/library/bb166441.aspx
 * Extensibility in Visual Studio: https://msdn.microsoft.com/en-us/library/dn919654.aspx
 * Visual Studio Extensibility Samples: https://github.com/Microsoft/VSSDK-Extensibility-Samples
+* Visual Studio - Visual Studio の複数バージョン向け拡張機能の作成: https://msdn.microsoft.com/ja-jp/magazine/mt493251
 * Making Visual Studio perfect: http://visualstudioextensions.vlasovstudio.com/
 * Visual Studio Extensibility (VSX): http://www.visualstudioextensibility.com/
 * Extending Visual Studio 2013, Part 1: Getting Started: http://blog.slaks.net/2013-10-18/extending-visual-studio-part-1-getting-started/
